@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     [Header("SpaceShip Settings")]
     [SerializeField] private float velocity = 1.5f;
     [SerializeField] private float rotationSpeed = 10f;
+    [SerializeField] private GameObject gameOverPanel;
 
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene(0);
+        gameOverPanel.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

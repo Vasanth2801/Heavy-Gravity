@@ -5,7 +5,7 @@ public class ScoreIncrease : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Score + 1");
+            ScoreManager.instance.AddScore(1);
         }
     }
 }
